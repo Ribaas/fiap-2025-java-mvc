@@ -11,25 +11,19 @@ public class Livro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotBlank(message = "O titulo é obrigatório")
+    @NotBlank(message = "O título é obrigatório")
     private String titulo;
-
     @NotBlank(message = "O autor é obrigatório")
     private String autor;
-
     @Enumerated(EnumType.STRING)
     @NotNull(message = "A categoria é obrigatória")
     private Categoria categoria;
-
     private String editora;
-
-    @DecimalMin(value = "0.99", message = "O preço mínimo é 0.99")
+    @DecimalMin(value = "0.99", message = "O preço deve ser no mínimo 0.99")
     private BigDecimal preco;
-
-    @Pattern(regexp = "^970\\d{7}$|^970\\d{10}$", message = "ISBN fora do padrão")
+    @Pattern(regexp = "^970\\d{7}$|^970\\d{10}$",
+            message = "ISBN fora do padrão")
     private String isbn;
-
     private LocalDate dataPublicacao;
 
     public Long getId() {

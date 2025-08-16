@@ -3,7 +3,7 @@ package br.com.fiap.spring_mvc.entity;
 public enum Categoria {
     TERROR("Terror"),
     ROMANCE("Romance"),
-    COMEDIA("Comedia"),
+    COMEDIA("Comédia"),
     FICCAO("Ficção"),
     SUSPENSE("Suspense"),
     FANTASIA("Fantasia"),
@@ -12,7 +12,7 @@ public enum Categoria {
 
     private String descricao;
 
-    Categoria (String descricao) {
+    Categoria(String descricao) {
         this.descricao = descricao;
     }
 
