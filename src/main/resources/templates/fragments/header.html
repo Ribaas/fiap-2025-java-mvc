@@ -5,9 +5,14 @@
     <title>Cabeçalho</title>
 </head>
 <body>
-    <div th:fragment="cabecalho">
+    <div th:fragment="cabecalho" class="header">
         <h1>Livraria</h1>
-        <span>Futuro menu</span>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" th:href="@{/livros/lista}">Livros</a>
+                <a class="nav-item nav-link" th:href="@{/livros/cadastro}">Cadastrar Livro</a>
+            </div>
+        </nav>
     </div>
 </body>
 </html>
