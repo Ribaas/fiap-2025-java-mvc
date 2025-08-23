@@ -9,7 +9,7 @@
     <link th:href="@{/css/style.css}" rel="stylesheet" />
   </head>
   <body>
-    <div th:include="~{fragments/header :: cabecalho}"></div>
+    <div th:insert="~{fragments/header :: cabecalho}"></div>
     <div class="main_content">
       <form method="post" th:action="@{cadastrar}" th:object="${livro}">
         <h2>Cadastro de Livro</h2>
@@ -67,6 +67,6 @@
         </div>
       </form>
     </div>
-    <div th:include="~{fragments/footer :: rodape}"></div>
+    <div th:insert="~{fragments/footer :: rodape}"></div>
   </body>
 </html>
